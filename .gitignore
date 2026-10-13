@@ -1,0 +1,19 @@
+# Do not include ROM dumps, emulator states, recordings, or local secrets.
+*.gb
+*.gbc
+*.sav
+*.state
+*.state.*
+*.mp4
+*.mov
+*.png
+*.jpg
+*.zip
+*.7z
+*.whl
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.pyc
