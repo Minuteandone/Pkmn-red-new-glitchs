@@ -1,0 +1,53 @@
+{
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "emulator": "PyBoy 2.8.1",
+  "initial_state": "synthetic Level 1 Day Care Pokémon EXP 0xFFFFCA; all subsequent XP changed by real D-pad steps",
+  "checkpoints": [
+    {
+      "input_actions": 53,
+      "exp": "0xFFFFFE",
+      "xy": [
+        2,
+        4
+      ]
+    },
+    {
+      "input_actions": 54,
+      "exp": "0xFFFFFF",
+      "xy": [
+        2,
+        5
+      ]
+    },
+    {
+      "input_actions": 55,
+      "exp": "0x000000",
+      "xy": [
+        1,
+        5
+      ]
+    },
+    {
+      "input_actions": 57,
+      "exp": "0x000002",
+      "xy": [
+        2,
+        4
+      ]
+    }
+  ],
+  "pre_wrap": {
+    "level_checks": 693,
+    "level_returns": 0,
+    "counter_wraps": 2,
+    "recalculated_level": 1
+  },
+  "post_wrap": {
+    "level_checks": 1,
+    "level_returns": 1,
+    "counter_wraps": 0,
+    "recalculated_level": 1
+  },
+  "successful_steps_until_wrap": 54,
+  "limitations": "Initial Day Care Pokémon created in RAM; ordinary play to obtain and deposit it not tested."
+}
