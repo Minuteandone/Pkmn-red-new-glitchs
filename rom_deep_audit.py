@@ -34,7 +34,7 @@ def simulated_exp_advance(exp: int, enabled: bool = True) -> int:
     if not enabled:
         return exp
     low = (exp + 1) & 0xFFFF
-    high = (exp >> 16) + (1 if low == 0 else 0)
+    high = ((exp >> 16) + (1 if low == 0 else 0)) & 0xFF
     if low == 0 and high >= 0x50:
         high = 0x50
     return (high << 16) | low
@@ -112,7 +112,7 @@ def main(path: Path) -> None:
     print('Day Care IncrementDayCareMonExp:', location(routine))
     print('WildMonEncounterSlotChances:', location(chances))
     print('Wild encounter slot weights:', SLOT_WEIGHTS, 'sum:', sum(SLOT_WEIGHTS))
-    for start in (0x000000, 0x4FFFFE, 0x4FFFFF, 0x500000, 0x50FFFE, 0x50FFFF):
+    for start in (0x000000, 0x4FFFFE, 0x4FFFFF, 0x500000, 0x50FFFE, 0x50FFFF, 0xFFFFFE, 0xFFFFFF):
         actual = execute_daycare_rom(rom, routine, start)
         expected = simulated_exp_advance(start)
         assert actual == expected, (start, actual, expected)
@@ -120,13 +120,13 @@ def main(path: Path) -> None:
     for start in (0, 0x4FFFFF, 0x50FFFF):
         assert execute_daycare_rom(rom, routine, start, enabled=False) == start
     # Deterministic wide-boundary fuzz test (sample 1024 states over four windows).
-    for base in (0x4F0000, 0x4FFF00, 0x500000, 0x50FF00):
+    for base in (0x4F0000, 0x4FFF00, 0x500000, 0x50FF00, 0xFFFF00):
         for low in range(256):
             initial = base + low
             actual = execute_daycare_rom(rom, routine, initial)
             expected = simulated_exp_advance(initial)
             assert actual == expected, (initial, actual, expected)
-    print('PASS: 1,024 boundary-adjacent EXP states + 3 disabled samples')
+    print('PASS: 1,280 boundary-adjacent EXP states + 3 disabled samples')
     # Parse probabilities as stored in the user's actual ROM and verify 256 outcomes.
     table = rom[chances:chances + 20]
     counts = [0] * 10
