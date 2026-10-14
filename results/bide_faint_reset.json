@@ -1,0 +1,23 @@
+{
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "method": "Limited LR35902 original-ROM instruction execution: two faint reset code snippets. NOT connected-link-console gameplay.",
+  "offsets": {
+    "faint_enemy": "0x3C584",
+    "faint_player": "0x3C763",
+    "bide_start": "0x3F6E5"
+  },
+  "tested_initial_states": 1024,
+  "nonzero_low_byte_cleanup_disagreements": 1020,
+  "example": {
+    "initial_damage": "0x013A",
+    "after_faint_enemy": "0x003A",
+    "after_faint_player": "0x0000",
+    "next_damage": 5,
+    "release_damage_if_bide_continues": [
+      126,
+      10
+    ]
+  },
+  "prior_art": "Known in pret/pokered and Gen I battle research; novelty not claimed.",
+  "limitations": "Hypothetical damage difference computed from the game Bide doubling rule; no two-console link protocol test."
+}
