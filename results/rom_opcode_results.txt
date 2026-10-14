@@ -1,0 +1,13 @@
+SHA-1: ea9bcae617fdf159b045185467ae58b2e4a48b9a
+Day Care IncrementDayCareMonExp: offset 0x0C8DE, bank 3, CPU 0x48DE
+WildMonEncounterSlotChances: offset 0x13918, bank 4, CPU 0x7918
+Wild encounter slot weights: (51, 51, 39, 25, 25, 25, 13, 13, 11, 3) sum: 256
+Day Care enabled: 0x000000 -> 0x000001
+Day Care enabled: 0x4FFFFE -> 0x4FFFFF
+Day Care enabled: 0x4FFFFF -> 0x500000
+Day Care enabled: 0x500000 -> 0x500001
+Day Care enabled: 0x50FFFE -> 0x50FFFF
+Day Care enabled: 0x50FFFF -> 0x500000
+PASS: 1,024 boundary-adjacent EXP states + 3 disabled samples
+PASS: all 256 encounter slot RNG inputs map to their table weights
+All ROM-backed checks passed (not an in-game playthrough).
