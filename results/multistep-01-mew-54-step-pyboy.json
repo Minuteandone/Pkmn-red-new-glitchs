@@ -1,0 +1,43 @@
+{
+  "evidence": "PyBoy 2.8.1 original-ROM actual in-game Day Care walking and withdrawal with constructed synthetic Mew as starting deposit; Trainer-Fly catch not reproduced",
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "cases": [
+    {
+      "steps": 0,
+      "xp": "0xFFFFCA",
+      "level_checks": 836,
+      "level_returns": 0,
+      "result": "nonterminating level search during observation"
+    },
+    {
+      "steps": 52,
+      "xp": "0xFFFFFE",
+      "level_checks": 836,
+      "level_returns": 0,
+      "result": "nonterminating level search during observation"
+    },
+    {
+      "steps": 54,
+      "xp": "0x000000",
+      "level_checks": 1,
+      "level_returns": 1,
+      "returned_species_id": 21,
+      "returned_level": 1,
+      "money_before": 9999,
+      "money_after": 9899,
+      "price": 100
+    },
+    {
+      "steps": 108,
+      "xp": "0x000036",
+      "level_checks": 2,
+      "level_returns": 1,
+      "returned_species_id": 21,
+      "returned_level": 2,
+      "money_before": 9999,
+      "money_after": 9799,
+      "price": 200
+    }
+  ],
+  "caveat": "Synthetic Mew in Day Care RAM. Full Trainer-Fly route not performed."
+}
