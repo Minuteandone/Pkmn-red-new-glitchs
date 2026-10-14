@@ -1,0 +1,65 @@
+{
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "emulator": "PyBoy 2.8.1",
+  "method": "original ROM plus synthetic Day Care WRAM state; game executes unchanged code",
+  "cases": [
+    {
+      "xp": "0x000064",
+      "iterations": 4,
+      "level": 4,
+      "returned": true
+    },
+    {
+      "xp": "0xFFFF73",
+      "iterations": 255,
+      "level": 100,
+      "returned": true,
+      "notes": "game clamps d=255 to 100"
+    },
+    {
+      "xp": "0xFFFF74",
+      "iterations": 256,
+      "level": 0,
+      "returned": true,
+      "withdrawn_level": 0,
+      "money_bcd_after": "000000",
+      "party_count_after": 2
+    },
+    {
+      "xp": "0xFFFFC9",
+      "iterations": 256,
+      "level": 0,
+      "returned": true
+    },
+    {
+      "xp": "0xFFFFCA",
+      "iterations": 1043,
+      "wraps": 4,
+      "returned": false,
+      "game_result": "softlock while calculating level"
+    },
+    {
+      "xp": "0xFFFFCD",
+      "iterations": 1043,
+      "wraps": 4,
+      "returned": false
+    },
+    {
+      "xp": "0xFFFFFF",
+      "iterations": 1043,
+      "wraps": 4,
+      "returned": false
+    },
+    {
+      "xp": "0x102C14",
+      "iterations": 100,
+      "level": 100,
+      "returned": true,
+      "withdrawn_level": 100,
+      "money_bcd_after": "000000",
+      "party_count_after": 2,
+      "fee_dollars": 9999
+    }
+  ],
+  "limits": "Ordinary gameplay reachability unverified for constructed XP states. Known underflow exists, but no first discovery claimed."
+}
