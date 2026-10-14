@@ -1,3 +1,5 @@
+> **UPDATE — Full-emulator verification completed.** This was originally a *source-only candidate*. [A subsequent PyBoy experiment](daycare-preserves-poison-pp.md) directly confirmed that the original Pokémon Red Day Care restores HP but preserves poison/burn status and spent PP, and that the preserved poison causes overworld damage. The reproduction and machine-readable results are public. This historical report remains for the development record.
+
 > **Evidence limit:** This is a source-only candidate, not a confirmed in-game Day Care behavior. Later PyBoy experiments in this project investigated *different* Day Care features; they do not prove the status/PP candidate.
 
 # Pokémon Red deep bug hunt — round 2 (2026-10-13)
