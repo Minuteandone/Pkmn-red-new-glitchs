@@ -47,3 +47,13 @@ The constructed `0xFFFFCA` XP state causes the Day Care level calculation to loo
 One faint-cleanup routine zeroes only the high byte of the Bide counter; the symmetric routine clears both bytes. Tests found **1,020 divergent cleanup results out of 1,024**. This is a **previously documented** Gen I implementation bug; no two-console link battle has been played or recorded in this project.
 
 Both reports distinguish emulator-confirmed results from source/ROM-based predictions, and **neither demonstrates a previously undiscovered naturally triggered glitch**.
+
+## Multistep investigations (2026-10-13)
+
+Two separate, structured investigations, with explicit reproducibility boundaries:
+
+1. **[Trainer-Fly → Level 1 Mew → Day Care 54-step rescue](reports/multistep-01-mew-54-step-rescue.md)** — continued an earlier experiment and **retested the last stage with Mew's actual internal species ID**. Repeated full-emulator steps confirmed a Level 1 Mew at 54 steps and a Level 2 Mew at 108 steps; 0/52 steps still produce the nonterminating level search. The deposited Mew was constructed in RAM; an uninterrupted Trainer-Fly-to-deposit playthrough remains untested. [Test script](tests/test_mew_54_step_daycare.py) · [Results](results/multistep-01-mew-54-step-pyboy.json).
+
+2. **[Transform → Metronome → phantom PP → Struggle suppression → Disable loop](reports/multistep-02-transform-phantom-pp-disable.md)** — independent battle-engine chain. Original ROM routines executed in PyBoy confirmed an empty slot gains PP, Struggle eligibility is corrupted, and a deterministic Disable move-selection test looped 1,501 times without a valid choice. **This glitch already has published prior art**, and these tests use prepared WRAM rather than a continuous normal battle. [Test script](tests/test_transform_phantom_pp.py) · [Results](results/multistep-02-transform-phantom-pp.json).
+
+Neither new report claims a first-ever discovery. No game ROM, save state, graphics or credentials are published here.
