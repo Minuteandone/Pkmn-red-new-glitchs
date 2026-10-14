@@ -1,0 +1,70 @@
+{
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "emulator": "PyBoy 2.8.1",
+  "method": "Synthetic Day Care Mew created in emulator WRAM; all step-dependent XP changes performed by actual D-pad movement on unchanged ROM.",
+  "case_notes": "For failing scenarios, 670 checks and two level-counter wraps were observed without a return during the observation window, not an infinite-duration measurement.",
+  "cases": [
+    {
+      "steps": 0,
+      "xp": "0xFFFFCA",
+      "party_before": 1,
+      "entered": 1,
+      "level_checks": 670,
+      "level_wraps": 2,
+      "level_returns": 0,
+      "daycare_level_after_talk": 1
+    },
+    {
+      "steps": 52,
+      "xp": "0xFFFFFE",
+      "party_before": 1,
+      "entered": 1,
+      "level_checks": 670,
+      "level_wraps": 2,
+      "level_returns": 0,
+      "daycare_level_after_talk": 1
+    },
+    {
+      "steps": 54,
+      "xp": "0x000000",
+      "checkpoints": {
+        "52": "0xFFFFFE",
+        "53": "0xFFFFFF",
+        "54": "0x000000"
+      },
+      "party_before": 1,
+      "entered": 1,
+      "level_checks": 1,
+      "level_wraps": 0,
+      "level_returns": 1,
+      "daycare_level_after_talk": 1,
+      "party_after": 2,
+      "returned_species": 21,
+      "returned_level": 1,
+      "daycare_in_use_after": 0,
+      "money_after_bcd": "009899"
+    },
+    {
+      "steps": 108,
+      "xp": "0x000036",
+      "checkpoints": {
+        "52": "0xFFFFFE",
+        "53": "0xFFFFFF",
+        "54": "0x000000",
+        "108": "0x000036"
+      },
+      "party_before": 1,
+      "entered": 1,
+      "level_checks": 2,
+      "level_wraps": 0,
+      "level_returns": 1,
+      "daycare_level_after_talk": 2,
+      "party_after": 2,
+      "returned_species": 21,
+      "returned_level": 2,
+      "daycare_in_use_after": 0,
+      "money_after_bcd": "009799"
+    }
+  ],
+  "limitations": "No from-start Trainer-Fly catch, physical cartridge, or natural-gameplay setup was tested. No ROM/save states included."
+}
