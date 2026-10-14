@@ -1,0 +1,81 @@
+{
+  "evidence": "original LR35902 ROM routines running in full PyBoy; constructed WRAM, not full battle",
+  "rom_sha1": "ea9bcae617fdf159b045185467ae58b2e4a48b9a",
+  "increment_move_pp": {
+    "party_move_ids_before": [
+      144,
+      0,
+      0,
+      0
+    ],
+    "party_pp_before": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "copied_battle_move_ids": [
+      144,
+      0,
+      118,
+      0
+    ],
+    "copied_battle_pp_before": [
+      0,
+      0,
+      5,
+      0
+    ],
+    "party_move_ids_after": [
+      144,
+      0,
+      0,
+      0
+    ],
+    "party_pp_after": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "copied_battle_pp_after": [
+      0,
+      0,
+      6,
+      0
+    ]
+  },
+  "any_move_to_select": {
+    "phantom_pp": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "phantom_pp_zero_flag": false,
+    "control_no_pp": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "control_zero_flag": true
+  },
+  "disable": {
+    "phantom_pp": {
+      "candidate_scans": 1501,
+      "valid_candidates": 0,
+      "stopped_by_test_harness": true
+    },
+    "no_pp_control": {
+      "candidate_scans": 1,
+      "valid_candidates": 0
+    },
+    "valid_move_control": {
+      "candidate_scans": 1,
+      "valid_candidates": 1
+    },
+    "randomness": "RNG callback replaced by 0 (valid outcome) so selection is deterministic"
+  },
+  "limitations": "Independent actual-ROM routine calls; does not emulate continuous battle, user input acquisition, actual disable accuracy or two-player link"
+}
